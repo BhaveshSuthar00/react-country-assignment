@@ -72,7 +72,7 @@ const AddCountry = () => {
   const [successStatus, setStatus] = useState(false);
   const handleSubmit = (e)=>{
     e.preventDefault();
-    axios.post('http://localhost:3004/country', {...country, id: uuid()}).then(()=> setStatus(true));
+    axios.post('https://face-database-app.herokuapp.com/country', {...country, id: uuid()}).then(()=> setStatus(true));
   }
   const handleChange = (e) => {
     const {id, value} = e.target;

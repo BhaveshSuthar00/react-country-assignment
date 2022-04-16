@@ -57,7 +57,7 @@ const Home = () => {
     const [country, setCountry] = useState({});
   const [countryList, setCountryList] = useState([]);
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:3004/city/${id}`).then((res)=>{
+        axios.delete(`https://face-database-app.herokuapp.com/city/${id}`).then((res)=>{
             let datahere = [];
             for(let i = 0; i<city.length;i++){
                 if(city[i].id !== id){
@@ -70,7 +70,7 @@ const Home = () => {
         })
     }
     const handleDataHere = ()=>{
-        axios.get('http://localhost:3004/city').then((res)=> setCity(res.data)).catch((err)=> console.log(err))
+        axios.get('https://face-database-app.herokuapp.com/city').then((res)=> setCity(res.data)).catch((err)=> console.log(err))
         return (()=>{
             setCity([])
         })
@@ -108,7 +108,7 @@ const Home = () => {
     }
     useEffect(()=>{}, [filter])
     useEffect(()=>{
-        axios.get('http://localhost:3004/country').then((res)=> setCountryList(res.data)).catch((err)=> console.log(err.message))
+        axios.get('https://face-database-app.herokuapp.com/country').then((res)=> setCountryList(res.data)).catch((err)=> console.log(err.message))
     }, [])
     if(city.length <= 0){
         return <>Loading...</>

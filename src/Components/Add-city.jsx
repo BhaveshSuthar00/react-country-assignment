@@ -8,7 +8,7 @@ const AddCity = () => {
   const [countryList, setCountryList] = useState([]);
   const handleSubmit = (e)=>{
     e.preventDefault();
-    axios.post('http://localhost:3004/city', {...country, id: uuid()}).then(()=> setStatus(true));
+    axios.post('https://face-database-app.herokuapp.com/city', {...country, id: uuid()}).then(()=> setStatus(true));
   }
   const handleChange = (e) => {
     const {id, value} = e.target;
@@ -31,7 +31,7 @@ const AddCity = () => {
 
   }, [successStatus])
   useEffect(()=>{
-    axios.get('http://localhost:3004/country').then((res)=> setCountryList(res.data)).catch((err)=> console.log(err.message))
+    axios.get('https://face-database-app.herokuapp.com/country').then((res)=> setCountryList(res.data)).catch((err)=> console.log(err.message))
   }, [])
   return (
     <div>

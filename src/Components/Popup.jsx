@@ -10,7 +10,7 @@ const Popup = () => {
   const [show, setShow] = useState(false);
   const handleSubmit = (e)=>{
     e.preventDefault();
-    axios.patch(`http://localhost:3004/city/${id}`, country).then(()=> setStatus(true));
+    axios.patch(`https://face-database-app.herokuapp.com/city/${id}`, country).then(()=> setStatus(true));
   }
   const handleChange = (e) => {
     const {id, value} = e.target;
@@ -33,7 +33,7 @@ const Popup = () => {
     })
   }, [successStatus])
     useEffect(()=>{
-        axios.get(`http://localhost:3004/city/${id}`).then((res) =>{
+        axios.get(`https://face-database-app.herokuapp.com/city/${id}`).then((res) =>{
         setCountry(res.data)
         setShow(true);    
     })
@@ -43,7 +43,7 @@ const Popup = () => {
     },[])
   const [countryList, setCountryList] = useState([]);
   useEffect(()=>{
-    axios.get('http://localhost:3004/country').then((res)=> setCountryList(res.data)).catch((err)=> console.log(err.message))
+    axios.get('https://face-database-app.herokuapp.com/country').then((res)=> setCountryList(res.data)).catch((err)=> console.log(err.message))
   }, [])
   if(!show){
       return <>Loading....</>

@@ -1,0 +1,55 @@
+{
+  "city": [
+    {
+      "city": "tokyo",
+      "population": "500000",
+      "country": "japan",
+      "id": "52f23a28-ce00-403b-a943-91556fb3fa96"
+    },
+    {
+      "city": "saitama",
+      "population": "50000",
+      "country": "japan",
+      "id": "c457ef19-edd0-4185-9120-f6dbe7dcb320"
+    },
+    {
+      "country": "dubai",
+      "city": "masakt",
+      "population": "100000",
+      "id": "7fa60617-b227-40b4-9a03-b0d66d3fe188"
+    }
+  ],
+  "country": [
+    {
+      "country": "japan",
+      "id": "51c8d835-bdd6-4fae-99dc-672c62bf0a5d"
+    },
+    {
+      "country": "dubai",
+      "id": "211bcbcb-f666-4c0a-8dd6-92933cf56189"
+    },
+    {
+      "country": "london",
+      "id": "dc618abd-08b9-4f7b-b1d6-bf51dca399d8"
+    },
+    {
+      "country": "canada",
+      "id": "aa46f7cc-3c5e-4448-aee0-e76371dcde38"
+    },
+    {
+      "country": "india",
+      "id": "88d3e52f-a7fd-40a0-99ca-a1848dc8ca97"
+    },
+    {
+      "country": "united state of america",
+      "id": "9b80dfe2-98c9-499d-8e80-dd7dd9ace065"
+    },
+    {
+      "country": "maskat",
+      "id": "5dbb02a2-7f01-4195-ac43-84c22502591c"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
