@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import styled from 'styled-components';
+import {useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
+import { addUser } from '../Redux/action';
 const Container = styled.div`
     margin-top: 1%;
     padding : 2% 0;
@@ -51,7 +53,9 @@ const Container = styled.div`
 `
 
 const Home = () => {
-    const [city, setCity] = useState([]);
+    const dispatch = useDispatch()
+    let dataStore = useSelector((store)=> store.data); 
+    const [city, setCity] = useState(dataStore);
     const [filter, setFilter] = useState(false);
     
     const [country, setCountry] = useState({});
@@ -70,7 +74,10 @@ const Home = () => {
         })
     }
     const handleDataHere = ()=>{
-        axios.get('https://face-database-app.herokuapp.com/city').then((res)=> setCity(res.data)).catch((err)=> console.log(err))
+        axios.get('https://face-database-app.herokuapp.com/city').then((res)=>{
+            setCity(res.data)
+            dispatch(addUser(res.data))
+        }).catch((err)=> console.log(err))
         return (()=>{
             setCity([])
         })
