@@ -1,7 +1,7 @@
 import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import AddCity from '../Components/Add-city'
-import AddCountry from '../Components/Add-country'
+import { AddCountry } from '../Components/Add-country'
 import Home from '../Components/Home'
 import Navbar from '../Components/Navbar'
 const Allroutes = () => {
